@@ -7,7 +7,7 @@ $(document).ready(function() {
 		  polloptiontextnumber++;
 	    	 expand = '.polloptiontext'+polloptiontextnumber;
 	    	
-	    	// ADD TEXTBOX.
+	    	// ADD TEXTBOX . 
          //   $('div.card-body').append("<div style='margin-top:10px;'><input type='text' maxlength='50' style='width:80%;display: inline;' class='form-control polloptiontext"+polloptiontextnumber+"'><button type='button' class='btn' id='addoption' style='float:right;'>*</button></div>");
             $("<div style='margin-top:10px;'><input type='text' maxlength='50' style='width:80%;display: inline;' class='form-control addnewopt polloptiontext"+polloptiontextnumber+"'><button type='button' class='btn removeoption' style='float:right;'>*</button></div>").appendTo('div.card-body')
 
