@@ -40,7 +40,7 @@
     
  
 </div>
-  
+  <!-- adsadasdsadadss -->
   </div>
 </body>
 	<script type="text/javascript" src="/js/textpoll.js"></script>
