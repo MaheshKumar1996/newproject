@@ -18,27 +18,28 @@
 	
 	<div class='row'>
 	<div class="col-md-6 col-xs-12 col-lg-6 card" style="margin-left:85px;margin-top:30px;">
-	 
 	  <div class="card-header">
-	    <h5 class="">
-	    <textarea rows="3" style="resize: none;" maxlength='200'  class='form-control'></textarea>
-	    </h5>
-	     </div>
+	 	  
+	 	  <button type='button' class='btn-sm' id='mcqoption' style='float:right;opacity:0.4;' title='Multiple Choice'> <img src='/img/icons/checkbox-img.png' alt = 'Multiple Choice' ></button>
+	      <button type='button' class='btn-sm' id='singlechoiceoption' style='float:right;background-color:#30CFCF' title='Single Choice'> <img src='/img/icons/radio-button-img.png' alt = 'Single Choice' ></button>
+	      <form action="" type='get'>
+	      <textarea rows="3" style="resize: none;" maxlength='200' id='poll_question' class='form-control'></textarea>
+	   </div>
 	    <div class="card-body">
 	    
-	    <div>
-	    <input type='text' maxlength='50' style='width:80%;display: inline;' class='form-control polloptiontext1'>
-	    <button type='button' class='btn removeoption' style='float:right;'>*</button>
-	    </div>
+		    <div>
+		    <input type='text' maxlength='50' style='width:80%;display: inline;' class='form-control poll_opt polloptiontext1'>
+		    <button type='button' class='btn removeoption' style='float:right;'>&times;</button>
+		    </div>
 	    
-	    <div style='margin-top:10px;'>
-	    <input type='text' maxlength='50' style='width:80%;display: inline;' class='form-control addnewopt polloptiontext2'>
-	    <button type='button' class='btn removeoption' style='float:right;'>*</button>
-	   </div>
-   <!--  <button type='button' class="btn btn-primary" id='addoption' style='float:right;'>+</button> -->
-    </div>
-    
- 
+		    <div style='margin-top:10px;'>
+		    <input type='text' maxlength='50' style='width:80%;display: inline;' class='form-control poll_opt addnewopt polloptiontext2'>
+		    <button type='button' class='btn removeoption' style='float:right;'>&times;</button>
+		   </div>
+	   <!--  <button type='button' class="btn btn-primary" id='addoption' style='float:right;'>+</button> -->
+	    </div>
+	     <button type='submit' class='btn btn-primary' id='save_poll' style='float:right;'>Save</button>
+          </form>
 </div>
   <!-- adsadasdsadadss -->
   </div>

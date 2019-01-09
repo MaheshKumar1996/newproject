@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+	Route::get('add_simple_poll', 'SimplePollController@add_simple_poll')->name('add_simple_poll');
