@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Log;
 use App\SimplePollModel;
+use Illuminate\Support\Facades\Session;
 
 class SimplePollController extends Controller
 {
@@ -18,8 +19,27 @@ class SimplePollController extends Controller
 // 		Log::error($request->question);
 		
 		
-		$pollObject=new SimplePollModel($request->poll_options,$request->poll_type,$request->question);
+		$pollObject=new SimplePollModel($request->poll_options,$request->poll_type,$request->question,'');
 		$id=$pollObject->insertsimplepoll();
-		exit;
+
+	}
+	
+	
+	public function display_simple_poll($id)
+	{
+		$pollObject=new SimplePollModel('','','',$id);
+		$polldetails=$pollObject->displaysimplepoll();
+		
+		Session::put('simplepolldetails',$polldetails);
+		return view('simplepoll/executepoll',compact('polldetails'));
+	}
+	
+	public function execute_simple_poll(Request $request)
+	{	
+		$pollObject=new SimplePollModel($request->selected_poll_options,'','',$request->selected_poll_ids);
+		$polldetails=$pollObject->executesimplepoll();
+
+// 		Session::put('simplepolldetails',$polldetails);
+ 		//return view('welcome');
 	}
 }

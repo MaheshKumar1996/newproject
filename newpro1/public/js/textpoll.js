@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var polloptiontextnumber = 2;
 	var expand = '.polloptiontext'+polloptiontextnumber;
-	var optiontype = 'single';
+	var optiontype = 'SCQ';
 	      $(document).on("keypress",".addnewopt", function(){
 		  $(expand).removeClass("addnewopt");
 		  polloptiontextnumber++;
@@ -32,7 +32,7 @@ $(document).ready(function() {
 	      
 	      
 	      $(document).on("click","#mcqoption", function(){
-	    	  optiontype = 'multiple';
+	    	  optiontype = 'MCQ';
                $(this).css('background-color','#30CFCF');
                $(this).css('opacity','1');
                $('#singlechoiceoption').css('opacity','0.4');
@@ -41,13 +41,14 @@ $(document).ready(function() {
 		   });      
 	      
 	      $(document).on("click","#singlechoiceoption", function(){
-	    	  optiontype = 'single';
+	    	  optiontype = 'SCQ';
               $(this).css('background-color','#30CFCF');
               $(this).css('opacity','1');
               $('#mcqoption').css('opacity','0.4');
               $('#mcqoption').css('background-color','#eeeeee');
 		   });   
 	      
+	      //SAVE A NEW POLL
 	      $(document).on("click","#save_poll", function(){
 	    	
 	    	  var number_options = $('.removeoption').length;
@@ -81,9 +82,8 @@ $(document).ready(function() {
 	    	       var error=JSON.stringify(data);
 	    	       alert(error);
 	    	     }
-	    	     });  
-	    	  
-	    	  
+	    	     });   
 		   });   
-	      
+	      //-------------------------------------
+
 });

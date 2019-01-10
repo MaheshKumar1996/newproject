@@ -22,7 +22,7 @@
 	 	  
 	 	  <button type='button' class='btn-sm' id='mcqoption' style='float:right;opacity:0.4;' title='Multiple Choice'> <img src='/img/icons/checkbox-img.png' alt = 'Multiple Choice' ></button>
 	      <button type='button' class='btn-sm' id='singlechoiceoption' style='float:right;background-color:#30CFCF' title='Single Choice'> <img src='/img/icons/radio-button-img.png' alt = 'Single Choice' ></button>
-	      <form action="" type='get'>
+	      <form action="" type='get' name='abc'>
 	      <textarea rows="3" style="resize: none;" maxlength='200' id='poll_question' class='form-control'></textarea>
 	   </div>
 	    <div class="card-body">
