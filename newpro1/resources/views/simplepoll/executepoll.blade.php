@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
+
 <title>NewPro</title>
 
 
@@ -16,7 +16,9 @@
 
 <body>
 
-<form action="" name='executepoll'  style='margin:100px'>
+<form name='executepoll' id='asd' style='margin:100px'>
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
+	{{ csrf_field() }}
 <?php 
 
 $poll_options = explode('|,|',$polldetails['options']);

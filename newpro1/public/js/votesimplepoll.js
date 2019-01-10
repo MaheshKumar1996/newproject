@@ -24,12 +24,16 @@ $(document).ready(function() {
 	    	  selected_options = JSON.stringify(selected_options);
 	    	  selected_id = JSON.stringify(selected_id);
 	    	  $.ajax({
-	    	         type: 'get',
+	    			headers: {
+	   		   	     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	   		   	},	
+	    	  
+	    	         method: 'post',
 	    	         url: '/execute_simple_poll',
 	    	         data:{'selected_poll_options':selected_options,'selected_poll_ids':selected_id},
-	    	         async : false,
+	    	       //  async : false,
 	    	         //contentType: "application/json; charset=utf-8",
-	    	         traditional: true,
+	    	       //  traditional: true,
 	    	         success: function (result) {
 	    	        //  window.close();
 	    	           console.log("Updated123");
@@ -40,6 +44,7 @@ $(document).ready(function() {
 	    	     {
 	    	      // alert("Error: please close the document and open it again");
 	    	       var error=JSON.stringify(data);
+	    	       console.log(error);
 	    	       alert(error);
 	    	     }
 	    	     });   

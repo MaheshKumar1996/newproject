@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 
-	Route::get('add_simple_poll', 'SimplePollController@add_simple_poll')->name('add_simple_poll');
+	Route::post('add_simple_poll', 'SimplePollController@add_simple_poll')->name('add_simple_poll');
 	Route::get('poll/{id}', 'SimplePollController@display_simple_poll')->name('display_simple_poll');
-	Route::get('/execute_simple_poll', 'SimplePollController@execute_simple_poll')->name('execute_simple_poll');
+	Route::post('/execute_simple_poll', 'SimplePollController@execute_simple_poll')->name('execute_simple_poll');

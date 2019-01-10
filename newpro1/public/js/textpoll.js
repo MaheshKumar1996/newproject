@@ -64,12 +64,15 @@ $(document).ready(function() {
 
 		    	var poll_question = $('#poll_question').val();
 	    	  $.ajax({
-	    	         type: 'get',
+	    		     headers: {
+	    		            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	    		        },
+	    	         method: 'post',
 	    	         url: '/add_simple_poll',
 	    	         data:{'poll_options':poll_options,'poll_type':optiontype,'question':poll_question},
-	    	         async : false,
+	    	        // async : false,
 	    	         //contentType: "application/json; charset=utf-8",
-	    	         traditional: true,
+	    	       //  traditional: true,
 	    	         success: function (result) {
 	    	        //  window.close();
 	    	           console.log("Updated123");
